@@ -1,0 +1,10 @@
+<div *ngIf="(pokemonList | async)?.length > 0; else noPokemon">
+    <poke-cell
+      *ngFor="let pokemon of (pokemonList | async)"
+      [pokemon]="pokemon"
+      [canAddToFavourites]="false"></poke-cell>
+</div>
+
+<ng-template #noPokemon>
+  <h3>No Favourites</h3>
+</ng-template>

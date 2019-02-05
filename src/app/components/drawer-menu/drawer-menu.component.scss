@@ -1,0 +1,22 @@
+.drawer {
+  position: absolute;
+  background: #4A89DC;
+  left: -250pt;
+  top: 0;
+  width: 250pt;
+  height: 100vh;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  transition: 0.1s ease-in-out;
+
+  &.open {
+    left: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}

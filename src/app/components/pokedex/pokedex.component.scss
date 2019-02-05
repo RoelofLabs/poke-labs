@@ -1,0 +1,8 @@
+.container {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  padding: 10pt;
+  height: calc(100vh - 50pt);
+  width: 100vw;
+}

@@ -1,0 +1,15 @@
+<poke-drawer-menu #drawerMenu></poke-drawer-menu>
+
+<div class="toolbar">
+    <button class="material" (click)="drawerMenu.open = true">|||</button>
+  <span class="title">{{title | titlecase}}</span>
+
+  <div class="spacer"></div>
+
+  <button class="material sorting" (click)="ToggleSorting()">Toggle Sorting</button>
+  <poke-poke-search (pokemonFound)="FoundPokemon($event)"></poke-poke-search>
+</div>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,26 @@
+<div class="container" *ngIf="pokemon?.name">
+  <div class="header">
+
+    <div class="ring ring1">
+      <div class="ring ring2">
+        <img class="sprite" [src]="pokemon.sprites.front_default">
+      </div>
+    </div>
+
+    <span class="name">{{pokemon.name | titlecase}}</span>
+
+    <div class="header-detail">
+      <span class="type">{{GetMainType() | titlecase}}</span>
+      <span class="base-experience">{{pokemon.base_experience}}</span>
+    </div>
+  </div>
+
+  <div class="detail">
+
+    <div class="stat" *ngFor="let stat of GetStats()">
+      <span class="stat-value">{{stat.value}}</span>
+      <span class="stat-name">{{stat.name | titlecase}}</span>
+    </div>
+
+  </div>
+</div>

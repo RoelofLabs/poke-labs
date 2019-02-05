@@ -1,0 +1,6 @@
+<div class="container">
+  <input type="search" class="search-input" [ngClass]="{'active': active, 'error': error}" [(ngModel)]="searchValue">
+  <button class="search-button" (click)="Toggle()">
+    <div class="search-icon"></div>
+  </button>
+</div>

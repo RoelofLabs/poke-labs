@@ -1,0 +1,20 @@
+<div class="container" >
+
+  <div *ngIf="(pokemonList | async)?.length > 0; else noPokemon">
+    <poke-grid [pokemonList]="(pokemonList | async)" (selected)="pokemonDetail.pokemon = $event"></poke-grid>
+    <div class="actions">
+      <button class="material previous" (click)="Previous()">Previous</button>
+      <button class="material next" (click)="Next()">Next</button>
+    </div>
+  </div>
+
+  <div>
+    <poke-detail #pokemonDetail [pokemon]="activePokemon"></poke-detail>
+  </div>
+</div>
+
+<ng-template #noPokemon>
+  <button class="material" (click)="RequestPokemon()">
+    Request
+  </button>
+</ng-template>

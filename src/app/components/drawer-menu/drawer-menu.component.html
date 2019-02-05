@@ -1,0 +1,8 @@
+<div class="drawer" [ngClass]="{'open': open}">
+    <button class="material" (click)="open = false"><<</button>
+
+  <div class="menu">
+    <button class="material" routerLink="/pokedex" (click)="open = false">Pokedex</button>
+    <button class="material" routerLink="/favourites" (click)="open = false">Favourites</button>
+  </div>
+</div>

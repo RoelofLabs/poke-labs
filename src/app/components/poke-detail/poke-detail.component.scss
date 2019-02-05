@@ -1,0 +1,131 @@
+@import '../../../assets/utils';
+
+.container {
+  @include material-shadow-no-transition;
+
+  display: flex;
+  flex-direction: column;
+  width: calc(50vw - 10pt);
+  max-height: calc(100vh - 70pt);
+  background-color: #fff;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  overflow: hidden;
+
+  &.hidden {
+    width: 0;
+  }
+
+  .header {
+    @include material-shadow-no-transition;
+    @include blue-gradient-bg;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15pt;
+    padding-top: 15pt;
+
+    .ring {
+      @include material-shadow-no-transition;
+
+      position: relative;
+      display: block;
+      border-radius: 100pt;
+      padding-top: 12.5pt;
+      margin: 0 auto;
+
+      &.ring1 {
+        width: 200pt;
+        height: 200pt;
+        background-color: rgba(#fff, 0.4);
+      }
+
+      .ring2 {
+        width: 175pt;
+        height: 175pt;
+        background-color: rgba(#fff, 0.6);
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .sprite {
+      @include material-shadow-no-transition;
+
+      width: 150pt;
+      height: 150pt;
+      border-radius: 100pt;
+      image-rendering: pixelated;
+      margin: 0 auto;
+      background-color: #fff;
+    }
+
+    .name {
+      margin: 10pt 0;
+      text-align: center;
+      font-size: 3em;
+      font-weight: bolder;
+      color: #fff;
+    }
+
+    .header-detail {
+      display: flex;
+      flex-direction: row;
+      height: 40pt;
+
+      .type, .base-experience {
+        width: calc(50vw/2 - 40pt);
+        text-align: center;
+        flex-grow: 1;
+        line-height: 40pt;
+        font-size: 1.5em;
+        font-weight: bolder;
+        background: rgba(#fff, 1);
+      }
+
+      .type {
+        margin-right: 15pt;
+      }
+      .base-experience {
+        margin-left: 15pt;
+      }
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 5pt 5pt 10pt 5pt;
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+
+
+      .stat-value {
+        @include material-shadow-no-transition;
+        @include blue-gradient-bg;
+
+        color: #fff;
+        display: inline-block;
+        width: 100pt;
+        height: 100pt;
+        line-height: 100pt;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bolder;
+        border-radius: 50pt;
+        margin: 10pt;
+      }
+
+      .stat-name {
+        text-align: center;
+        font-weight: bolder;
+      }
+    }
+  }
+}

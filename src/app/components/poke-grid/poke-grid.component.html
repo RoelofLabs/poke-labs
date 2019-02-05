@@ -1,0 +1,7 @@
+<poke-filter (filter)="Filter($event)"></poke-filter>
+<div>
+  <poke-cell
+    *ngFor="let pokemon of pokemonList"
+    [pokemon]="pokemon"
+    (selected)="Selected($event)"></poke-cell>
+</div>

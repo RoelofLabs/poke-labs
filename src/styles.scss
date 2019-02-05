@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import './assets/utils';
+@import './assets/material-button';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e2e1e0;
+  font-family: 'Roboto', sans-serif;
+}
+
+button.material {
+  @include material-button;
+  font-size: 1.2em;
+  margin: 5pt;
+  padding: 5pt;
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+  width: 5pt;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  // @include material-shadow-no-transition;
+  // border: 1pt solid #999;
+  // border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @include blue-gradient-bg;
+
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  @include blue-gradient-bg;
+}

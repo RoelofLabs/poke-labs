@@ -1,0 +1,9 @@
+<div class="container">
+  <button *ngIf="canAddToFavourites" (click)="AddToFavourites()"></button>
+
+  <div (click)="Select()">
+    <img [src]="pokemon.sprites.front_default">
+    <span>{{pokemon.name | titlecase}}</span>
+  </div>
+
+</div>

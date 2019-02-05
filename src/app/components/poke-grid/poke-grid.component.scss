@@ -1,0 +1,11 @@
+div {
+  width: calc(47vw - 20pt);
+  max-height: calc(100vh - 70pt);
+  margin-right: 10pt;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  overflow-y: scroll;
+}
